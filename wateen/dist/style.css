@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Cairo", sans-serif;
+  font-size: 12px;
+  color: #fff;
+  line-height: 130%;
+}
+html {
+  height: 0%;
+}
+body {
+  display: table;
+  width: 100%;
+}
+.container {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+h1 {
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #000;
+}
+h1 > p {
+  font-size: 20px;
+}
+.counters {
+  margin: 0px;
+}
+.counter {
+  background: #0088ff;
+  display: inline-block;
+  min-width: 55px;
+}
+.counter > p {
+  text-transform: uppercase;
+  background: #0069ff;
+  padding: 8px;
+}
+span {
+  display: block;
+  height: 60px;
+  font-size: 26px;
+  line-height: 60px;
+}
