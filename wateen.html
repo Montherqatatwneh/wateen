@@ -1,0 +1,118 @@
+<div class='container'>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Cairo", sans-serif;
+      font-size: 12px;
+      color: #fff;
+      line-height: 130%;
+    }
+
+    html {
+      height: 0%;
+    }
+
+    body {
+      display: table;
+      width: 100%;
+    }
+
+    .container {
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    h1 {
+      text-transform: capitalize;
+      font-size: 14px;
+      color: #000;
+    }
+
+    h1>p {
+      font-size: 20px;
+    }
+
+    .counters {
+      margin: 0px;
+    }
+
+    .counter {
+      background: #0088ff;
+      display: inline-block;
+      min-width: 55px;
+    }
+
+    .counter>p {
+      text-transform: uppercase;
+      background: #0069ff;
+      padding: 8px;
+    }
+
+    span {
+      display: block;
+      height: 60px;
+      font-size: 26px;
+      line-height: 60px;
+    }
+  </style>
+
+  <script>
+    // Set the countdown date
+    var countDownDate = new Date("june 15, 2023 14:00:00").getTime();
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+      // Get the current time
+      var now = new Date().getTime();
+      // Find the distance between current time and the count down date
+      var distance = countDownDate - now;
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      // Display the result in the corresponding elements
+      document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+      document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+      document.getElementById("minutes").innerHTML =
+        minutes < 10 ? "0" + minutes : minutes;
+      document.getElementById("seconds").innerHTML =
+        seconds < 10 ? "0" + seconds : seconds;
+      // If the count down is finished display Happy New Year text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("title").innerHTML = " ORIENTATION 13 <p></p>";
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+      }
+    }, 1000);
+  </script>
+
+  <h1 id='title' </p>
+  </h1>
+  <div class='counters'>
+
+    <div class='counter'>
+      <span id='days'>00</span>
+      <p>Days</p>
+    </div>
+
+    <div class='counter'>
+      <span id='hours'>00</span>
+      <p>Hours</p>
+    </div>
+
+    <div class='counter'>
+      <span id='minutes'>00</span>
+      <p>Minutes</p>
+    </div>
+
+    <div class='counter'>
+      <span id='seconds'>00</span>
+      <p>Seconds</p>
+    </div>
+
+  </div>
